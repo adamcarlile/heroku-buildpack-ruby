@@ -17,7 +17,7 @@ class LanguagePack::Ruby < LanguagePack::Base
   NODE_VERSION         = "0.4.7"
   NODE_JS_BINARY_PATH  = "node-#{NODE_VERSION}"
   JVM_BASE_URL         = "http://heroku-jdk.s3.amazonaws.com"
-  LATEST_JVM_VERSION   = "openjdk7-latest"
+  LATEST_JVM_VERSION   = "openjdk1.8.0_b107"
   LEGACY_JVM_VERSION   = "openjdk1.7.0_25"
   DEFAULT_RUBY_VERSION = "ruby-2.0.0"
   RBX_BASE_URL         = "http://binaries.rubini.us/heroku"
@@ -191,7 +191,7 @@ private
   # default JRUBY_OPTS
   # return [String] string of JRUBY_OPTS
   def default_jruby_opts
-    "-Xcompile.invokedynamic=false"
+    "-Xcompile.invokedynamic=true"
   end
 
   # default JAVA_TOOL_OPTIONS
